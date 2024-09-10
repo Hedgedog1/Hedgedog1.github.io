@@ -79,7 +79,7 @@ body {
 
 .sans {
     font-size: 10vw; /* Responsive font size */
-    font-family: 'Comic Sans MS';
+    font-family: "Comic Sans", "Comic Sans MS", "Chalkboard", "ChalkboardSE-Regular", sans-serif;
     margin: 0;
 }
 
