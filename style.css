@@ -60,34 +60,23 @@ body {
 
 
 
-/* Style for the image container in the main section */
+/* Cement container styling for responsiveness */
 .cement {
     display: flex;
-    flex-wrap: wrap; /* Allow images to wrap if there isn't enough space */
-    gap: 10px; /* Space between images */
-    overflow: hidden; /* Hide overflow by default */
-    width: 100%; /* Full width */
+    overflow-x: auto; /* Enable horizontal scrolling for overflow */
+    scroll-snap-type: x mandatory; /* Enable snap scrolling for a better user experience */
+    gap: 10px; /* Adds space between images */
+    padding: 10px 0; /* Adds some padding around the images */
 }
-/* Style for each image */
+
+/* Cement images styling */
 .cement img {
-    flex: 1 1 auto; /* Allow images to grow and shrink */
-    max-width: calc(25% - 10px); /* Four images per row with some spacing */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Cover the container while maintaining aspect ratio */
-}
-
-/* Optional: Add styles for scrollbar if needed */
-.cement::-webkit-scrollbar {
-    height: 8px; /* Adjust scrollbar height */
-}
-
-.cement::-webkit-scrollbar-thumb {
-    background: #888; /* Scrollbar thumb color */
-    border-radius: 4px; /* Round scrollbar thumb */
-}
-
-.cement::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Darker color on hover */
+    width: 100%; /* Image width should scale to the container width */
+    max-width: 200px; /* Sets a maximum width to keep images smaller */
+    height: auto; /* Maintains the aspect ratio */
+    flex-shrink: 0; /* Prevents the images from shrinking */
+    scroll-snap-align: start; /* Ensures the image snaps to the start of the container */
+    object-fit: cover; /* Ensures the images cover their container fully */
 }
 
 
@@ -95,6 +84,15 @@ body {
 /*responsive img niewiem jak ale działa*/
 .fakeimg {
     background-color: #aaa;
+    width: 100%;
+    aspect-ratio: 2.1 / 1; /* Maintain aspect ratio */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Prevent overflow */
+}
+.fakeimg1 {
+    background-color: #ffffff;
     width: 100%;
     aspect-ratio: 2.1 / 1; /* Maintain aspect ratio */
     display: flex;
@@ -191,14 +189,14 @@ body {
         border-right: 1px solid black;
     }
     .cement {
-        flex-wrap: nowrap; /* Prevent wrapping */
         overflow-x: auto; /* Enable horizontal scrolling */
-        scroll-snap-type: x mandatory; /* Enable snap scrolling */
+        display: flex; /* Flexbox layout for scrolling */
+        scroll-snap-type: x mandatory; /* Snap horizontally */
     }
 
     .cement img {
-        min-width: 100%; /* Each image takes up the full width */
-        scroll-snap-align: start; /* Snap to the start of each image */
+        max-width: 150px; /* Reduce max width for smaller screens */
+        min-width: auto; /* Resets min-width to fit in the smaller container */
     }
 }
 @media screen and (max-width: 400px) {
