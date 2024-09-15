@@ -60,45 +60,45 @@ body {
 
 
 
-/* Cement container styling for responsiveness */
+
 .cement {
     display: flex;
-    overflow-x: auto; /* Enable horizontal scrolling for overflow */
-    scroll-snap-type: x mandatory; /* Enable snap scrolling for a better user experience */
-    gap: 10px; /* Adds space between images */
-    padding: 10px 0; /* Adds some padding around the images */
+    overflow-x: auto; 
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+    padding: 10px 0; 
 }
 
-/* Cement images styling */
+
 .cement img {
-    width: 100%; /* Image width should scale to the container width */
-    max-width: 200px; /* Sets a maximum width to keep images smaller */
-    height: auto; /* Maintains the aspect ratio */
-    flex-shrink: 0; /* Prevents the images from shrinking */
-    scroll-snap-align: start; /* Ensures the image snaps to the start of the container */
-    object-fit: cover; /* Ensures the images cover their container fully */
+    width: 100%;
+    max-width: 200px; 
+    height: auto; 
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    object-fit: cover;
 }
 
 
 
-/*responsive img niewiem jak ale działa*/
+
 .fakeimg {
     background-color: #aaa;
     width: 100%;
-    aspect-ratio: 2.1 / 1; /* Maintain aspect ratio */
+    aspect-ratio: 2.1 / 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* Prevent overflow */
+    overflow: hidden;
 }
 .fakeimg1 {
     background-color: #ffffff;
     width: 100%;
-    aspect-ratio: 2.1 / 1; /* Maintain aspect ratio */
+    aspect-ratio: 2.1 / 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* Prevent overflow */
+    overflow: hidden;
 }
 .rura {
     width: 100%;
@@ -107,9 +107,17 @@ body {
     display: block;
     object-fit: cover;
 }
-/*a tu poto bym widział jak to jest zrobione*/
 
 
+.fakeimg2 {
+    background-color: #ffffff;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
 
 
 .footer {
@@ -118,7 +126,6 @@ body {
     background: #ddd;
 }
 
-/* Responsive footer image */
 .footer img {
     max-width: 100%;
     height: auto;
@@ -126,12 +133,12 @@ body {
 }
 
 .sans {
-    font-size: 10vw; /* Responsive font size */
+    font-size: 10vw; 
     font-family: "Comic Sans", "Comic Sans MS", "Chalkboard", "ChalkboardSE-Regular", sans-serif;
     margin: 0;
 }
 
-/* Top Navigation Styles */
+
 .topnav .search-container {
     float: right;
 }
@@ -158,23 +165,22 @@ body {
 
 
 
-/* Responsive Media Queries */
 @media screen and (max-width: 700px) {
     .row, .navbar {
-        flex-direction: column; /* Stack elements vertically */
+        flex-direction: column; 
     }
     
     .navbar a {
-        flex: none; /* Reset flex property */
-        width: 100%; /* Make navbar links full width */
+        flex: none; 
+        width: 100%;
     }
 
     .side, .main {
-        width: 100%; /* Make side and main sections full width */
+        width: 100%;
     }
     
     .sans {
-        font-size: 12vw; /* Adjust font size for smaller screens */
+        font-size: 12vw; 
     }
     
     .topnav .search-container {
@@ -183,25 +189,25 @@ body {
     }
     .topnav input[type=text], .topnav .search-container button {
         float: none;
-        width: calc(100% - 32px); /* Adjust width to fit */
+        width: calc(100% - 32px);
         margin: 0;
         padding: 10px;
         border-right: 1px solid black;
     }
     .cement {
-        overflow-x: auto; /* Enable horizontal scrolling */
-        display: flex; /* Flexbox layout for scrolling */
-        scroll-snap-type: x mandatory; /* Snap horizontally */
+        overflow-x: auto; 
+        display: flex; 
+        scroll-snap-type: x mandatory; 
     }
 
     .cement img {
-        max-width: 150px; /* Reduce max width for smaller screens */
-        min-width: auto; /* Resets min-width to fit in the smaller container */
+        max-width: 150px; 
+        min-width: auto;
     }
 }
 @media screen and (max-width: 400px) {
     .sans {
-        font-size: 14vw; /* Even larger for very small screens */
+        font-size: 14vw; 
     }
     
     .fakeimg {
@@ -209,11 +215,11 @@ body {
     }
 
     .navbar, .row {
-        flex-direction: column; /* Stack items vertically */
+        flex-direction: column;
     }
 
     .topnav input[type=text], .topnav .search-container button {
-        width: 100%; /* Full width input and button */
+        width: 100%;
         padding: 14px;
     }
 }
