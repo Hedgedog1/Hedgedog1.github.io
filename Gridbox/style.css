@@ -56,16 +56,40 @@ header{
     height: auto;
     grid-area: a;
 }
+.b{
+    margin: 0;
+    background-color: #333;
+    width: 100%;
+    height: auto;
+    grid-area: b;
+}
+.c{
+    margin: 0;
+    background-color: #333;
+    width: 100%;
+    height: auto;
+    grid-area: c;
+}
+.d{
+    margin: 0;
+    background-color: #333;
+    width: 100%;
+    height: auto;
+    grid-area: d;
+}
+p{
+    margin: 0px;
+    text-align: center;
+    color: #ffffff;
+}
 
-main{ 
-    margin: 30px;
-    grid-gap: 50px;
+main { 
     justify-content: center;
     display: grid;
     grid-template-columns: 200px 200px 200px 200px;
-    grid-template-rows: 200px;
+    grid-template-rows: auto;
     grid-template-areas: 
-    "a a a a"
+    "a b c d"
     ;
 }
 
@@ -81,19 +105,19 @@ main{
         ;
     }
 }
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 800px) {
     main { 
-        margin: 30px;
-        grid-gap: 50px;
+        justify-content: center;
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: auto;
         grid-template-areas: 
-        "a"
+        "a b c d"
         ;
     }
-    .mainimg, .handbag, .watch, .shoes, .belt, img {
+    .mainimg, .belt, .shoes, .handbag, img{
         width: 100%;
+        max-width: 100%;
         height: auto;
     }
 }
@@ -113,14 +137,6 @@ main{
         width: 100%;
         max-width: 100%;
         height: auto;
-    }
-    main{ 
-        margin: 30px;
-        grid-gap: 20px;
-        justify-content: center;
-        display: grid;
-        grid-template-columns: 200px 200px 200px 200px;
-        grid-template-rows: 200px;
     }
 }
 
@@ -146,7 +162,6 @@ button{
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
     color: rgb(0, 0, 0);
