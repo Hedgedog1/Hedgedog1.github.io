@@ -1,0 +1,157 @@
+
+
+.mainimg{
+    margin: 0;
+    background-color: #333;
+    width: 100%;
+    height: auto;
+    grid-area: mi;
+}
+
+.handbag{
+    margin: 0;
+    background-color: #333;
+    width: 100%;
+    height: auto;
+    grid-area: hb;
+}
+.watch{
+    margin: 0;
+    background-color: #333;
+    width: 100%;
+    height: auto;
+    grid-area: wt;
+}
+.shoes{
+    margin: 0;
+    background-color: #333;
+    width: 100%;
+    height: auto;
+    grid-area: sh;
+}
+.belt{
+    margin: 0;
+    background-color: #333;
+    width: 100%;
+    height: auto;
+    grid-area: bt;
+}
+header{ 
+    background-color: #333;
+    display: grid;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: 380px 380px 380px 380px;
+    grid-template-rows: 200px 200px;
+    grid-template-areas:
+    "mi mi hb wt"
+    "mi mi sh bt"
+    ;
+}
+.a{
+    margin: 0;
+    background-color: #333;
+    width: 100%;
+    height: auto;
+    grid-area: a;
+}
+
+main{ 
+    margin: 30px;
+    grid-gap: 50px;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-template-rows: 200px;
+    grid-template-areas: 
+    "a a a a"
+    ;
+}
+
+
+@media screen and (max-width: 1520px) {
+    header{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "mi mi hb wt"
+        "mi mi sh bt"
+        ;
+    }
+}
+@media screen and (max-width: 860px) {
+    main { 
+        margin: 30px;
+        grid-gap: 50px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "a"
+        ;
+    }
+    .mainimg, .handbag, .watch, .shoes, .belt, img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    header{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "mi mi hb"
+        "mi mi wt"
+        ". bt sh"
+        ;
+    }   
+    .mainimg, .belt, .shoes, .handbag, img{
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+    main{ 
+        margin: 30px;
+        grid-gap: 20px;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: 200px 200px 200px 200px;
+        grid-template-rows: 200px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "mi mi"
+        "mi mi"
+        "hb wt"
+        "sh bt";
+    }
+
+    .mainimg, .belt, .shoes, .handbag, img{
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+}
+button{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+}
+body{margin: 0px; background: #333;}
+.navbar {display: flex;background-color: #333;flex-wrap: wrap;}
+.navbar a {color: white;padding: 10px 15px;text-decoration: none;text-align: center;flex: 1;}
+.navbar a:hover {background-color: #ddd;color: black;}
